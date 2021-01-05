@@ -6,10 +6,12 @@
  *      Author: Timor
  */
 
+#include <stdio.h>
+
 #ifndef ALGEBRA_H_
 #define ALGEBRA_H_
 
-#define MATRIX_nXn 3
+#define MATRIX_nXn 2
 
 void multMatrix(double A[MATRIX_nXn][MATRIX_nXn], double B[MATRIX_nXn][MATRIX_nXn], double res[MATRIX_nXn], size_t n);
 

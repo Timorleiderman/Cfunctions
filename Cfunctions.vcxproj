@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="algebra.c" />
     <ClCompile Include="functions.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>
