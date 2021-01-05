@@ -12,12 +12,8 @@ void multMatrix(double A[MATRIX_nXn][MATRIX_nXn], double B[MATRIX_nXn][MATRIX_nX
 		res[i] = 0;
 
 	for (i = 0; i < n; i++)
-	{
 		for (j = 0; j < n; j++)
-		{
 			res[i] += A[i][j] * B[j][i];
-		}
-	}
 }
 
 // transpose matrix only NxN
@@ -43,20 +39,29 @@ void cofactor(double src[MATRIX_nXn][MATRIX_nXn], double dst[MATRIX_nXn][MATRIX_
 
 	double sign;
 	for (row = 0; row < n; row++)
-		for (col = 0; col < n; col++) {
+		for (col = 0; col < n; col++)
+		{
 			minRow = 0;
 			minCol = 0;
 			for (i = 0; i < n; i++)
-				for (j = 0; j < n; j++)
-					if (i != row && j != col) {
+			{
+				for (j = 0; j < n; j++) 
+				{
+					if (i != row && j != col) 
+					{
 						minerMat[minCol][minRow] = src[i][j];
 						if (minCol < (n - 2))
+						{
 							minCol++;
-						else {
+						}
+						else 
+						{
 							minCol = 0;
 							minRow++;
 						}
 					}
+				}
+			}
 			sign = (double)row + (double)col;
 			cofactorMat[row][col] = pow(-1, sign) * determinant(minerMat, (n - 1));
 		}
@@ -72,11 +77,11 @@ void cofactor(double src[MATRIX_nXn][MATRIX_nXn], double dst[MATRIX_nXn][MATRIX_
 // inverse of a matrix with cofactor algorithem
 void inverse(double src[MATRIX_nXn][MATRIX_nXn], double dst[MATRIX_nXn][MATRIX_nXn], size_t n, double det) {
 	if (det == 0)
-		DEBUG_PRINT("\n determinant 0 no inverse\n");
+		DEBUG_PRINT("\n Matrix cannot inverse det = 0\n");
 	else if (n == 1)
 		dst[0][0] = 1;
 	else
-		cofactor(src, dst, n, det);	// read function
+		cofactor(src, dst, n, det);
 }
 
 
