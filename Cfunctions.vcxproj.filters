@@ -24,12 +24,18 @@
     <ClCompile Include="algebra.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mult.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algebra.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mult.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

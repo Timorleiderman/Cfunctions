@@ -142,10 +142,12 @@
     <ClCompile Include="algebra.c" />
     <ClCompile Include="functions.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="mult.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algebra.h" />
     <ClInclude Include="functions.h" />
+    <ClInclude Include="mult.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

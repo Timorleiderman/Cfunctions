@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 #include "algebra.h"
-
+#include "mult.h"
 #include "functions.h"
 
 void PrintNxNMatrix(double A[MATRIX_nXn][MATRIX_nXn], size_t n)
@@ -31,6 +31,16 @@ void PrintNxNMatrix(double A[MATRIX_nXn][MATRIX_nXn], size_t n)
 
 int main()
 {
+
+	DEBUG_PRINT("*Recrusive multiplications*\n");
+	
+	int x, y, res;
+	x = 3;
+	y = 5;
+	res = multiply(3, 5);
+
+	printf("result recrusive %d * %d = %d", x, y, res);
+	getchar();
 	int n = 2;
 	double A[2][2];// = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 
@@ -38,7 +48,7 @@ int main()
 
 	
 	DEBUG_PRINT("write matrix [%d]X[%d]\n", n, n);
-	int res;
+
 	for (int i = 0; i < n; i++)
 		for (int j = 0; j < n; j++)
 		{
